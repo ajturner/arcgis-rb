@@ -6,7 +6,7 @@ class Arcgis::Connection
   #
   # Take in username/password upon initialization
   #
-  def initialize(host:, username: nil, password: nil, token: nil)
+  def initialize(host: "https://www.arcgis.com/sharing/rest", username: nil, password: nil, token: nil)
     @host = host.sub(/\/$/,'')
     @token, @token_expires = token, nil
     @username, @password = username, password
